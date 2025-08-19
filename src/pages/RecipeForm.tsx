@@ -1,8 +1,8 @@
 import { addRecipe, editRecipe, type Recipe } from "@/features/Recipe"
-import type { RootState } from "../app/store"
 import { useState, type ChangeEvent, type FormEvent } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate, useParams } from "react-router"
+import type { RootState } from "../app/store"
 export const RecipeForm = () => {
     const navigate = useNavigate()
     const { id } = useParams()
@@ -47,7 +47,7 @@ export const RecipeForm = () => {
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
-            <div className="w-full mx-auto mt-10 bg-white shadow-md rounded-2xl p-8">
+            <div className="max-w-xl w-full mx-auto mt-10 bg-white shadow-md rounded-2xl p-8">
                 <h1 className="text-2xl font-bold mb-6 text-gray-800">
                     {recipe ? "Edit Recipe" : "➕ Add Recipe"}
                 </h1>
